@@ -6,7 +6,16 @@ package FactoryDesign;
 public class Customer {
 	
 	public static void main( String[] args ) {
+		CoffeeFactory coffeeFactory = new CoffeeFactory();
 		
+		Coffee coffeea = coffeeFactory.produceCoffee( "COFFEEA" );
+		coffeea.prepare();
+		
+		Coffee coffeeb = coffeeFactory.produceCoffee( "CoffeeB" );
+		coffeeb.prepare();
+		
+		Coffee coffeec = coffeeFactory.produceCoffee( "coffeec" );
+		coffeec.prepare();
 	}
 	
 }
