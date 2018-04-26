@@ -3,13 +3,12 @@ package BuilderDesign;
 /**
  * Created by Subangkar on 27-Apr-18.
  */
-public class ChickenBurger implements BurgerBuilder {
+class ChickenBurger implements BurgerBuilder {
 	
 	private Burger burger;
 	
-	ChickenBurger()
-	{
-		System.out.println("Chicken Burger Preparing Started :: ");
+	ChickenBurger() {
+		System.out.println( "Chicken Burger Preparing Started :: " );
 		burger = new Burger();
 	}
 	
@@ -19,13 +18,13 @@ public class ChickenBurger implements BurgerBuilder {
 	}
 	
 	@Override
-	public void addSauce() {
-		burger.add( "added sauce considering Chicken Burger" );
+	public void addCheese() {
+		burger.add( "added Chicken cheese" );
 	}
 	
 	@Override
-	public void addCheese() {
-		burger.add( "added Chicken cheese" );
+	public void addSauce() {
+		burger.add( "added sauce considering Chicken Burger" );
 	}
 	
 	@Override
