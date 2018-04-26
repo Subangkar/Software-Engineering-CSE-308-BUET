@@ -1,1 +1,4 @@
 **/.tmp.drivedownload/
+
+**/cmake-build-debug/
+**/CMakeFiles/
