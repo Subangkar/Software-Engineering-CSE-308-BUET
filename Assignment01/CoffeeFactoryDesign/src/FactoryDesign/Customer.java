@@ -6,7 +6,7 @@ package FactoryDesign;
 public class Customer {
 	
 	public static void main( String[] args ) {
-		CoffeeFactory coffeeFactory = new CoffeeFactory();
+		CoffeeFactory coffeeFactory = CoffeeFactory.getInstance();
 		
 		Coffee coffeea = coffeeFactory.produceCoffee( "COFFEEA" );
 		coffeea.prepare();
