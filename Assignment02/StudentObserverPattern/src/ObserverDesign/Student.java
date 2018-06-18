@@ -17,9 +17,9 @@ public class Student extends Observer {
 	
 	@Override
 	public void sendMail() {
-		System.out.println( name + " :" );
-		System.out.println( "E-mail from Subscribed Software :" );
-		System.out.println( "Updated Info :" + software.getInfo() );
+		System.out.println( " " + name + ": " );
+		System.out.println( "\tE-mail from Subscribed Software: " );
+		System.out.println( "\tUpdated Info: " + software.getInfo() );
 	}
 	
 	
