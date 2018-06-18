@@ -5,6 +5,7 @@ package ObserverDesign;
  */
 
 //Observer
-public interface Observer {
-	void update();
+public abstract class Observer {
+	protected Software software;
+	abstract void update();
 }

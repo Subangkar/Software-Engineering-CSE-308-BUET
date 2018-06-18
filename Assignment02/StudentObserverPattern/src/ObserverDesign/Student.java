@@ -6,8 +6,9 @@ package ObserverDesign;
 public class Student implements Observer {
 	
 	
+	
 	@Override
 	public void update() {
-		
+	
 	}
 }
