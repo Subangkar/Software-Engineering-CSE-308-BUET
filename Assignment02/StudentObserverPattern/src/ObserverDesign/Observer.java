@@ -7,5 +7,5 @@ package ObserverDesign;
 //Observer
 public abstract class Observer {
 	protected Software software;
-	abstract void update();
+	abstract void sendMail();
 }

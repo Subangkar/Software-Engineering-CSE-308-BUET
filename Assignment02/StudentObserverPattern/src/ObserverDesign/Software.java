@@ -27,7 +27,7 @@ public class Software {
 	
 	void notifyAllObservers(){
 		for(Observer observer:observers){
-			observer.update();
+			observer.sendMail();
 		}
 	}
 	
