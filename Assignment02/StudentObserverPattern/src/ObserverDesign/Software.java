@@ -6,26 +6,27 @@ import java.util.List;
 /**
  * Created by Subangkar on 18-Jun-18.
  */
+// Subject
 public class Software {
 	
-	private String info;
-	private List<Observer> observers;
+	private String info; // state
+	private List<Observer> observers; // keeps subscription list
 	
-	Software()
+	public Software()
 	{
 		observers = new ArrayList<>(  );
 		info = "";
 	}
 	
-	void subscribe(Observer observer){
+	public void subscribe(Observer observer){
 		observers.add( observer );
 	}
 	
-	void unsubscribe(Observer observer){
+	public void unsubscribe(Observer observer){
 		observers.remove( observer );
 	}
 	
-	void notifyAllObservers(){
+	public void notifyAllObservers(){
 		for(Observer observer:observers){
 			observer.sendMail();
 		}
@@ -36,6 +37,7 @@ public class Software {
 	}
 	
 	public void setInfo( String info ) {
+		System.out.println("\nInfo Changed in Software : "+info);
 		this.info = info;
 		notifyAllObservers();
 	}
