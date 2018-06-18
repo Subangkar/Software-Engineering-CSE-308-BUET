@@ -11,4 +11,8 @@ public class VendingMachine {
 		vendorMachineState = null;
 	}
 	
+	
+	void setState(VendorMachineState state) {
+		this.vendorMachineState = state;
+	}
 }
