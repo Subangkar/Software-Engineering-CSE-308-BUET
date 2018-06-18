@@ -3,3 +3,6 @@
 **/.idea/misc.xml
 *.class
 Assignment02/StudentObserverPattern/.idea/modules.xml
+Assignment02/StudentObserverPattern/.idea/uiDesigner.xml
+Assignment02/VendorStatePattern/.idea/modules.xml
+Assignment02/VendorStatePattern/.idea/vcs.xml
