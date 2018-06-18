@@ -5,6 +5,11 @@ package StateDesign;
  */
 public class InitialState implements VendorMachineState {
 	
+	private VendingMachine vendingMachine;
+	
+	public InitialState( VendingMachine vendingMachine ) {
+		this.vendingMachine = vendingMachine;
+	}
 	
 	@Override
 	public void insertCoin( double value ) {
