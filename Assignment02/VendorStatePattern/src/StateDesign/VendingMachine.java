@@ -34,6 +34,14 @@ public class VendingMachine {
 		this.selectedDrinks = selectedDrinks;
 	}
 	
+	public ArrayList< DrinkSupply > getDrinkSupplyList() {
+		return drinkSupplyList;
+	}
+	
+	public void setDrinkSupplyList( ArrayList< DrinkSupply > drinkSupplyList ) {
+		this.drinkSupplyList = drinkSupplyList;
+	}
+	
 	VendingMachine( DrinkSupply[] drinkSupplyList ) {
 		vendorMachineState = new InitialState( this );
 		this.drinkSupplyList = new ArrayList( Arrays.asList( drinkSupplyList ) );

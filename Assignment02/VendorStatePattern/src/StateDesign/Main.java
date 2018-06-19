@@ -36,6 +36,10 @@ public class Main {
 				case 4:
 					vendingMachine.getMoney();
 					break;
+
+				case 0:
+					vendingMachine.getMoney();
+					break;
 			}
 		}
 	}

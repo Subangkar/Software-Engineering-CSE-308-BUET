@@ -8,12 +8,12 @@ public class DeliverDrinkState implements VendorMachineState {
 	private VendingMachine vendingMachine;
 	
 	public DeliverDrinkState( VendingMachine vendingMachine ) {
+		System.out.println( "Machine in DeliverDrinkState" );
 		this.vendingMachine = vendingMachine;
 	}
 	
 	@Override
 	public void insertCoin() {
-	
 	}
 	
 	@Override
