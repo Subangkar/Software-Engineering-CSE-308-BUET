@@ -1,13 +1,13 @@
 package StateDesign;
 
 /**
- * Created by Subangkar on 18-Jun-18.
+ * Created by Subangkar on 19-Jun-18.
  */
-public class HasCoinState implements VendorMachineState {
+public class DrinksSelected implements VendorMachineState {
 	
 	private VendingMachine vendingMachine;
 	
-	public HasCoinState( VendingMachine vendingMachine ) {
+	public DrinksSelected( VendingMachine vendingMachine ) {
 		this.vendingMachine = vendingMachine;
 	}
 	

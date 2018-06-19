@@ -32,7 +32,7 @@ public class DeliverDrinkState implements VendorMachineState {
 	}
 	
 	@Override
-	public double changeCurrency() {
+	public double returnExtraCurrency() {
 		return 0;
 	}
 }
