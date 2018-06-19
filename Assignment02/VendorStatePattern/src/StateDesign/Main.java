@@ -20,7 +20,7 @@ public class Main {
 		Scanner scanner = new Scanner( System.in );
 		int choice = 5;
 		while (choice != 0) {
-			System.out.println( "\t1.Insert Coin 2.Select Drink 3.Get Drink 4.Get Extra Inserted Cash\n\t0.Exit" );
+			System.out.println( "\t1.Insert Coin 2.Select Drink 3.Get Inserted Cash 4.Show Available Drinks\n\t0.Exit" );
 			System.out.print( "\tEnter a choice: " );
 			choice = scanner.nextInt();
 			switch (choice) {
@@ -31,14 +31,14 @@ public class Main {
 					vendingMachine.selectItem();
 					break;
 				case 3:
-					vendingMachine.getDrinks();
+					vendingMachine.getCash();
 					break;
 				case 4:
-					vendingMachine.getMoney();
+					vendingMachine.showAvailableItems();
 					break;
 
 				case 0:
-					vendingMachine.getMoney();
+					vendingMachine.getCash();
 					break;
 			}
 		}

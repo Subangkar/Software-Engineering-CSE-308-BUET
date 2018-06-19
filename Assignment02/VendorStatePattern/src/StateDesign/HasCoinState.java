@@ -16,8 +16,8 @@ public class HasCoinState implements VendorMachineState {
 	
 	@Override
 	public void insertCoin() {
-		System.out.println(":/ Coin Already Inserted");
-		System.out.print( "Enter an amount: " );
+		System.out.println(vendingMachine.getInsertedCash()+"$ Coin Already Inserted");
+		System.out.print( "Enter more amount: " );
 		double cash = new Scanner( System.in ).nextDouble();
 		if (cash > 0) {
 			vendingMachine.setInsertedCash( vendingMachine.getInsertedCash()+cash );
@@ -32,19 +32,47 @@ public class HasCoinState implements VendorMachineState {
 		System.out.println( "Enter your Preferred Drinks Name: " );
 		String drinks = new Scanner( System.in ).next();
 		vendingMachine.setSelectedDrinks( drinks );
-		vendingMachine.setState( new DrinksSelected( vendingMachine ) );
-	}
-	
-	@Override
-	public void deliverDrinks() {
-		System.out.println(":( No Drinks Selected.");
-	}
 
+		boolean hasDrink, hasEnoughCash, hasEnoughCan;
+		hasDrink = hasEnoughCash = hasEnoughCan = false;
+		DrinkSupply drink = null;
+		for (DrinkSupply drinkSupply : vendingMachine.getDrinkSupplyList()) {
+			if (drinkSupply.name.equalsIgnoreCase( vendingMachine.getSelectedDrinks() )) {
+				hasDrink = true;
+				if (drinkSupply.noOfCans > 0) hasEnoughCan = true;
+				if (drinkSupply.pricePerCan <= vendingMachine.getInsertedCash()) hasEnoughCash = true;
+				drink = drinkSupply;
+				break;
+			}
+		}
+		
+		if (hasDrink && hasEnoughCan && hasEnoughCash) {
+			vendingMachine.setInsertedCash( vendingMachine.getInsertedCash() - drink.pricePerCan );
+			drink.noOfCans--;
+			
+			System.out.println( "Can Delivered: " + drink.name );
+			System.out.println( "Cash Deducted: " + drink.pricePerCan );
+			
+			returnExtraCurrency();
+			return;
+		}
+		else if (!hasDrink) System.out.println( ":( Sorry Drinks Not Available in Inventory." );
+		else if (!hasEnoughCan) System.out.println( ":( Sorry Drinks supply has been finished." );
+		else if (!hasEnoughCash) System.out.println( ":( Not enough cash inserted." );
+		
+		System.out.println( ":( Select another Drinks" );
+	}
 	
 	@Override
 	public void returnExtraCurrency() {
-		System.out.println("Cash Returned: "+vendingMachine.getInsertedCash());
-		vendingMachine.setInsertedCash( 0 );
+		if (vendingMachine.getInsertedCash() > 0) {
+			System.out.println( "Cash Returned: " + vendingMachine.getInsertedCash() );
+			vendingMachine.setInsertedCash( 0 );
+		}
+		else {
+			System.out.println( "No cash to return" );
+		}
 		vendingMachine.setState( new InitialState( vendingMachine ) );
 	}
+	
 }

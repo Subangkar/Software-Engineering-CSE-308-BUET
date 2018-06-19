@@ -7,6 +7,5 @@ public interface VendorMachineState {
 	
 	void insertCoin();
 	void selectDrinks();
-	void deliverDrinks();
 	void returnExtraCurrency();
 }

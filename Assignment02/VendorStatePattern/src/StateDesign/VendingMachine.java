@@ -15,23 +15,23 @@ public class VendingMachine {
 	private double insertedCash;
 	private String selectedDrinks;
 	
-	public double getInsertedCash() {
+	double getInsertedCash() {
 		return insertedCash;
 	}
 	
-	public void setInsertedCash( double insertedCash ) {
+	void setInsertedCash( double insertedCash ) {
 		this.insertedCash = insertedCash;
 	}
 	
-	public String getSelectedDrinks() {
+	String getSelectedDrinks() {
 		return selectedDrinks;
 	}
 	
-	public void setSelectedDrinks( String selectedDrinks ) {
+	void setSelectedDrinks( String selectedDrinks ) {
 		this.selectedDrinks = selectedDrinks;
 	}
 	
-	public ArrayList< DrinkSupply > getDrinkSupplyList() {
+	ArrayList< DrinkSupply > getDrinkSupplyList() {
 		return drinkSupplyList;
 	}
 	
@@ -53,11 +53,7 @@ public class VendingMachine {
 		vendorMachineState.selectDrinks();
 	}
 	
-	void getDrinks() {
-		vendorMachineState.deliverDrinks();
-	}
-	
-	void getMoney() {
+	void getCash() {
 		vendorMachineState.returnExtraCurrency();
 	}
 	
@@ -65,10 +61,6 @@ public class VendingMachine {
 		for (DrinkSupply drink : drinkSupplyList) {
 			System.out.println( ">> " + drink.name + " " + drink.pricePerCan + "$" );
 		}
-	}
-	
-	public void addDrinks( DrinkSupply drinkSupply ) {
-		drinkSupplyList.add( drinkSupply );
 	}
 	
 }

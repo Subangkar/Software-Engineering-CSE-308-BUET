@@ -32,12 +32,7 @@ public class InitialState implements VendorMachineState {
 	}
 	
 	@Override
-	public void deliverDrinks() {
-		System.out.println( ":( no coin inserted." );
-	}
-	
-	@Override
 	public void returnExtraCurrency() {
-		System.out.println( ":( no coin inserted." );
+		System.out.println( ":( No cash remaining." );
 	}
 }
