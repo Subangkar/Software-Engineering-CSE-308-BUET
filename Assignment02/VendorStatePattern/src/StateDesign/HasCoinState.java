@@ -28,6 +28,7 @@ public class HasCoinState implements VendorMachineState {
 	
 	@Override
 	public void selectDrinks() {
+		vendingMachine.showAvailableItems();
 		System.out.println( "Enter your Preferred Drinks Name: " );
 		String drinks = new Scanner( System.in ).next();
 		vendingMachine.setSelectedDrinks( drinks );

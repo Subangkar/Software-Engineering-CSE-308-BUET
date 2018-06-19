@@ -2,7 +2,6 @@ package StateDesign;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
 
 /**
  * Created by Subangkar on 18-Jun-18.
@@ -10,8 +9,6 @@ import java.util.Scanner;
 public class VendingMachine {
 	
 	private VendorMachineState vendorMachineState;
-	
-	private int[] coinSupply = { 8 , 10 , 10 , 5 , 10 , 2 }; // 5,10,20,50,100,500
 	
 	private ArrayList< DrinkSupply > drinkSupplyList;
 	
@@ -65,11 +62,11 @@ public class VendingMachine {
 	}
 	
 	void getDrinks() {
-	
+		vendorMachineState.deliverDrinks();
 	}
 	
 	void getMoney() {
-	
+		vendorMachineState.returnExtraCurrency();
 	}
 	
 	
