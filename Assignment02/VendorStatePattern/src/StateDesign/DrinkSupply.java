@@ -7,11 +7,11 @@ class DrinkSupply {
 
 	String name;
 	double pricePerCan;
-	double capacityInML;
+	double noOfCans;
 	
-	public DrinkSupply( String name , double pricePerCan , double capacityInML ) {
+	public DrinkSupply( String name , double pricePerCan , double noOfCans ) {
 		this.name = name;
 		this.pricePerCan = pricePerCan;
-		this.capacityInML = capacityInML;
+		this.noOfCans = noOfCans;
 	}
 }

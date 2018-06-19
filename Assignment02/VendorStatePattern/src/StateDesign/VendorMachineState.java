@@ -5,9 +5,8 @@ package StateDesign;
  */
 public interface VendorMachineState {
 	
-	void insertCoin(double value);
-	void selectDrinks(int option);
+	void insertCoin();
+	void selectDrinks();
 	void deliverDrinks();
-//	void changeDrinks();
-	double returnExtraCurrency();
+	void returnExtraCurrency();
 }

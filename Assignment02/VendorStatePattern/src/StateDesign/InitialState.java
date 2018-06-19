@@ -1,5 +1,7 @@
 package StateDesign;
 
+import java.util.Scanner;
+
 /**
  * Created by Subangkar on 18-Jun-18.
  */
@@ -12,27 +14,30 @@ public class InitialState implements VendorMachineState {
 	}
 	
 	@Override
-	public void insertCoin( double value ) {
-	
+	public void insertCoin( ) {
+		System.out.print( "Enter an amount: " );
+		double cash = new Scanner( System.in ).nextDouble();
+		vendingMachine.setInsertedCash( cash );
+		if(vendingMachine.getInsertedCash()>0){
+			vendingMachine.setState( new HasCoinState( vendingMachine ) );
+		}
+		else {
+			System.out.println(":) Enter a valid amount");
+		}
 	}
 	
 	@Override
-	public void selectDrinks( int option ) {
-	
+	public void selectDrinks() {
+		System.out.println(":( you must insert coin.");
 	}
 	
 	@Override
 	public void deliverDrinks() {
-	
+		System.out.println(":( no coin inserted.");
 	}
 	
 	@Override
-	public void changeDrinks() {
-	
-	}
-	
-	@Override
-	public double returnExtraCurrency() {
-		return 0;
+	public void returnExtraCurrency() {
+		System.out.println(":( no coin inserted.");
 	}
 }

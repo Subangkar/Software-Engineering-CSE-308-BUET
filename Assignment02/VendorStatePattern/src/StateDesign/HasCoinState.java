@@ -12,12 +12,12 @@ public class HasCoinState implements VendorMachineState {
 	}
 	
 	@Override
-	public void insertCoin( double value ) {
+	public void insertCoin() {
 	
 	}
 	
 	@Override
-	public void selectDrinks( int option ) {
+	public void selectDrinks() {
 	
 	}
 	
@@ -25,11 +25,7 @@ public class HasCoinState implements VendorMachineState {
 	public void deliverDrinks() {
 	
 	}
-	
-	@Override
-	public void changeDrinks() {
-	
-	}
+
 	
 	@Override
 	public double returnExtraCurrency() {
