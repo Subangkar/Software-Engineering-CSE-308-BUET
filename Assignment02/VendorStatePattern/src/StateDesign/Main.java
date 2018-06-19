@@ -21,7 +21,7 @@ public class Main {
 		int choice = 5;
 		while (choice != 0) {
 			System.out.println( "1.Insert Coin 2.Select Drink 3.Get Drink 4.Get Extra Inserted Cash\n0.Exit" );
-			System.out.println( "Enter a choice: " );
+			System.out.print( "Enter a choice: " );
 			choice = scanner.nextInt();
 			switch (choice) {
 				case 1:

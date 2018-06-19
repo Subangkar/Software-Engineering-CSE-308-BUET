@@ -10,6 +10,7 @@ public class InitialState implements VendorMachineState {
 	private VendingMachine vendingMachine;
 	
 	public InitialState( VendingMachine vendingMachine ) {
+		System.out.println("Machine in InitialState");
 		this.vendingMachine = vendingMachine;
 	}
 	
