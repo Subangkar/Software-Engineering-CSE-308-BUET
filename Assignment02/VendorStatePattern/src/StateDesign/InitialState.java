@@ -10,35 +10,34 @@ public class InitialState implements VendorMachineState {
 	private VendingMachine vendingMachine;
 	
 	public InitialState( VendingMachine vendingMachine ) {
-		System.out.println("Machine in InitialState");
+		System.out.println( "Machine in InitialState" );
 		this.vendingMachine = vendingMachine;
 	}
 	
 	@Override
-	public void insertCoin( ) {
+	public void insertCoin() {
 		System.out.print( "Enter an amount: " );
 		double cash = new Scanner( System.in ).nextDouble();
 		vendingMachine.setInsertedCash( cash );
-		if(vendingMachine.getInsertedCash()>0){
+		if (vendingMachine.getInsertedCash() > 0) {
 			vendingMachine.setState( new HasCoinState( vendingMachine ) );
-		}
-		else {
-			System.out.println(":) Enter a valid amount");
+		} else {
+			System.out.println( ":) Not a valid amount" );
 		}
 	}
 	
 	@Override
 	public void selectDrinks() {
-		System.out.println(":( you must insert coin.");
+		System.out.println( ":( you must insert coin." );
 	}
 	
 	@Override
 	public void deliverDrinks() {
-		System.out.println(":( no coin inserted.");
+		System.out.println( ":( no coin inserted." );
 	}
 	
 	@Override
 	public void returnExtraCurrency() {
-		System.out.println(":( no coin inserted.");
+		System.out.println( ":( no coin inserted." );
 	}
 }

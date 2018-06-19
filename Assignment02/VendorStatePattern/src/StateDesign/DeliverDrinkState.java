@@ -23,11 +23,11 @@ public class DeliverDrinkState implements VendorMachineState {
 	
 	@Override
 	public void deliverDrinks() {
-	
+
 	}
 	
 	@Override
-	public double returnExtraCurrency() {
-		return 0;
+	public void returnExtraCurrency() {
+	
 	}
 }

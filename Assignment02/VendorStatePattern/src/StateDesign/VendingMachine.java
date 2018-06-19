@@ -14,7 +14,9 @@ public class VendingMachine {
 	private int[] coinSupply = { 8 , 10 , 10 , 5 , 10 , 2 }; // 5,10,20,50,100,500
 	
 	private ArrayList< DrinkSupply > drinkSupplyList;
+	
 	private double insertedCash;
+	private String selectedDrinks;
 	
 	public double getInsertedCash() {
 		return insertedCash;
@@ -22,6 +24,14 @@ public class VendingMachine {
 	
 	public void setInsertedCash( double insertedCash ) {
 		this.insertedCash = insertedCash;
+	}
+	
+	public String getSelectedDrinks() {
+		return selectedDrinks;
+	}
+	
+	public void setSelectedDrinks( String selectedDrinks ) {
+		this.selectedDrinks = selectedDrinks;
 	}
 	
 	VendingMachine( DrinkSupply[] drinkSupplyList ) {
@@ -43,8 +53,6 @@ public class VendingMachine {
 	}
 	
 	void selectItem() {
-		System.out.println( "Enter your Preferred Drinks Name: " );
-		String drinks = new Scanner( System.in ).next();
 		vendorMachineState.selectDrinks();
 	}
 	
