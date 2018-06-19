@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="0.0">StateDesign.VendingMachine</node>
+    <node x="0.0" y="594.0">StateDesign.HasCoinState</node>
+    <node x="292.5" y="427.0">StateDesign.VendorMachineState</node>
+    <node x="218.0" y="779.0">StateDesign.Main</node>
+    <node x="271.0" y="594.0">StateDesign.InitialState</node>
+    <node x="542.0" y="594.0">StateDesign.DrinksSelected</node>
+    <node x="0.0" y="779.0">StateDesign.DrinkSupply</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="StateDesign.InitialState" target="StateDesign.VendorMachineState">
+      <point x="0.0" y="-70.0" />
+      <point x="-1.4210854715202004E-14" y="58.5" />
+    </edge>
+    <edge source="StateDesign.DrinksSelected" target="StateDesign.VendorMachineState">
+      <point x="0.0" y="-70.0" />
+      <point x="667.5" y="569.0" />
+      <point x="465.8333333333333" y="569.0" />
+      <point x="69.33333333333331" y="58.5" />
+    </edge>
+    <edge source="StateDesign.HasCoinState" target="StateDesign.VendorMachineState">
+      <point x="0.0" y="-70.0" />
+      <point x="125.5" y="569.0" />
+      <point x="327.1666666666667" y="569.0" />
+      <point x="-69.33333333333333" y="58.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.1950955943474646" x="216.99999999999997" y="128.52368366140365" />
+  <SelectedNodes>
+    <node>StateDesign.DrinksSelected</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
