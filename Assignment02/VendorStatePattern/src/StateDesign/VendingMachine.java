@@ -35,10 +35,6 @@ public class VendingMachine {
 		return drinkSupplyList;
 	}
 	
-	public void setDrinkSupplyList( ArrayList< DrinkSupply > drinkSupplyList ) {
-		this.drinkSupplyList = drinkSupplyList;
-	}
-	
 	VendingMachine( DrinkSupply[] drinkSupplyList ) {
 		vendorMachineState = new InitialState( this );
 		this.drinkSupplyList = new ArrayList( Arrays.asList( drinkSupplyList ) );
@@ -47,10 +43,6 @@ public class VendingMachine {
 	
 	void setState( VendorMachineState state ) {
 		this.vendorMachineState = state;
-	}
-	
-	public VendorMachineState getVendorMachineState() {
-		return vendorMachineState;
 	}
 	
 	void insertCoin() {
@@ -68,7 +60,6 @@ public class VendingMachine {
 	void getMoney() {
 		vendorMachineState.returnExtraCurrency();
 	}
-	
 	
 	public void showAvailableItems() {
 		for (DrinkSupply drink : drinkSupplyList) {
