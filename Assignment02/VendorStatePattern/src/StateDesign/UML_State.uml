@@ -3,104 +3,33 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="118.75132850241545" y="501.0">StateDesign.VendingMachine</node>
-    <node x="155.19776570048307" y="145.0">StateDesign.HasCoinState</node>
-    <node x="0.0" y="0.0">StateDesign.VendorMachineState</node>
-    <node x="300.69082125603865" y="889.0">StateDesign.Main</node>
-    <node x="62.08466183574876" y="313.0">StateDesign.InitialState</node>
-    <node x="333.67276570048307" y="0.0">StateDesign.DrinkSupply</node>
+    <node x="0.0" y="0.0">StateDesign.VendingMachine</node>
+    <node x="0.0" y="528.0">StateDesign.HasCoinState</node>
+    <node x="157.0" y="383.0">StateDesign.VendorMachineState</node>
+    <node x="567.0" y="383.0">StateDesign.Main</node>
+    <node x="271.0" y="528.0">StateDesign.InitialState</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="StateDesign.VendingMachine" target="StateDesign.InitialState">
-      <point x="-67.77777777777777" y="-169.0" />
-      <point x="203.47355072463768" y="461.0" />
-      <point x="103.91799516908208" y="461.0" />
-      <point x="-83.66666666666667" y="59.0" />
-    </edge>
-    <edge source="StateDesign.VendingMachine" target="StateDesign.VendorMachineState">
-      <point x="-101.66666666666666" y="-169.0" />
-      <point x="169.5846618357488" y="471.0" />
-      <point x="51.58466183574876" y="471.0" />
-      <point x="51.58466183574876" y="125.0" />
-      <point x="78.0" y="125.0" />
-      <point x="-26.0" y="47.5" />
-    </edge>
-    <edge source="StateDesign.InitialState" target="StateDesign.VendingMachine">
-      <point x="83.66666666666669" y="59.0" />
-      <point x="0.0" y="-169.0" />
-    </edge>
-    <edge source="StateDesign.InitialState" target="StateDesign.HasCoinState">
-      <point x="0.0" y="-59.0" />
-      <point x="187.58466183574876" y="288.0" />
-      <point x="186.57276570048307" y="288.0" />
-      <point x="-94.125" y="59.0" />
-    </edge>
-    <edge source="StateDesign.Main" target="StateDesign.DrinkSupply">
-      <point x="21.125" y="-25.5" />
-      <point x="406.31582125603865" y="859.0" />
-      <point x="446.91998792270533" y="859.0" />
-      <point x="446.91998792270533" y="115.0" />
-      <point x="454.77276570048303" y="115.0" />
-      <point x="34.599999999999966" y="47.5" />
-    </edge>
     <edge source="StateDesign.InitialState" target="StateDesign.VendorMachineState">
-      <point x="-83.66666666666669" y="-59.0" />
-      <point x="103.91799516908208" y="288.0" />
-      <point x="101.11455314009663" y="288.0" />
-      <point x="101.11455314009663" y="125.0" />
-      <point x="130.0" y="125.0" />
-      <point x="26.0" y="47.5" />
+      <point x="0.0" y="-59.0" />
+      <point x="396.5" y="503.0" />
+      <point x="313.0" y="503.0" />
+      <point x="52.0" y="47.5" />
     </edge>
     <edge source="StateDesign.HasCoinState" target="StateDesign.VendorMachineState">
-      <point x="-62.75" y="-59.0" />
-      <point x="217.94776570048307" y="125.0" />
-      <point x="182.0" y="125.0" />
-      <point x="78.0" y="47.5" />
-    </edge>
-    <edge source="StateDesign.HasCoinState" target="StateDesign.DrinkSupply">
-      <point x="62.75" y="-59.0" />
-      <point x="343.44776570048305" y="125.0" />
-      <point x="350.9727657004831" y="125.0" />
-      <point x="-69.19999999999999" y="47.5" />
-    </edge>
-    <edge source="StateDesign.Main" target="StateDesign.VendingMachine">
-      <point x="-63.375" y="-25.5" />
-      <point x="321.81582125603865" y="869.0" />
-      <point x="195.00132850241545" y="869.0" />
-      <point x="-76.25" y="169.0" />
-    </edge>
-    <edge source="StateDesign.HasCoinState" target="StateDesign.VendingMachine">
-      <point x="94.125" y="59.0" />
-      <point x="374.82276570048305" y="288.0" />
-      <point x="355.93894927536235" y="288.0" />
-      <point x="355.93894927536235" y="481.0" />
-      <point x="339.0291062801932" y="481.0" />
-      <point x="67.77777777777777" y="-169.0" />
-    </edge>
-    <edge source="StateDesign.VendingMachine" target="StateDesign.DrinkSupply">
-      <point x="135.55555555555554" y="-169.0" />
-      <point x="406.806884057971" y="481.0" />
-      <point x="427.69776570048305" y="481.0" />
-      <point x="427.69776570048305" y="115.0" />
-      <point x="420.17276570048307" y="115.0" />
-      <point x="0.0" y="47.5" />
-    </edge>
-    <edge source="StateDesign.HasCoinState" target="StateDesign.InitialState">
-      <point x="-31.375" y="59.0" />
-      <point x="249.32276570048307" y="288.0" />
-      <point x="271.25132850241545" y="288.0" />
-      <point x="83.66666666666669" y="-59.0" />
+      <point x="0.0" y="-59.0" />
+      <point x="125.5" y="503.0" />
+      <point x="209.0" y="503.0" />
+      <point x="-52.0" y="47.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.3697916666666667" x="253.5" y="470.0" />
-  <SelectedNodes>
-    <node>StateDesign.Main</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic Group" zoom="0.5893617021276596" x="184.5" y="460.0" />
+  <SelectedNodes />
   <Categories>
-    <Category>Inner Classes</Category>
     <Category>Fields</Category>
     <Category>Methods</Category>
+    <Category>Inner Classes</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>

@@ -3,60 +3,27 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="139.50000000000003" y="124.0">ObserverDesign.Software</node>
-    <node x="111.625" y="594.0">ObserverDesign.Main</node>
-    <node x="95.34895833333334" y="0.0">ObserverDesign.Observer</node>
-    <node x="0.0" y="381.0">ObserverDesign.Student</node>
+    <node x="11.0" y="292.0">ObserverDesign.Software</node>
+    <node x="281.0" y="0.0">ObserverDesign.Main</node>
+    <node x="36.5" y="0.0">ObserverDesign.Observer</node>
+    <node x="0.0" y="124.0">ObserverDesign.Student</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="ObserverDesign.Main" target="ObserverDesign.Student">
-      <point x="-21.125" y="-25.5" />
-      <point x="175.0" y="574.0" />
-      <point x="177.0" y="574.0" />
-      <point x="59.0" y="81.5" />
-    </edge>
     <edge source="ObserverDesign.Student" target="ObserverDesign.Observer">
-      <point x="-1.4210854715202004E-14" y="-81.5" />
-      <point x="117.99999999999999" y="356.0" />
-      <point x="105.75104166666668" y="356.0" />
-      <point x="105.75104166666668" y="104.0" />
-      <point x="144.24895833333335" y="104.0" />
-      <point x="-32.599999999999994" y="37.0" />
+      <point x="0.0" y="-59.0" />
+      <point x="0.0" y="37.0" />
     </edge>
-    <edge source="ObserverDesign.Student" target="ObserverDesign.Software">
-      <point x="78.66666666666669" y="-81.5" />
-      <point x="196.66666666666669" y="356.0" />
-      <point x="175.16666666666669" y="356.0" />
-      <point x="-71.33333333333334" y="103.5" />
-    </edge>
-    <edge source="ObserverDesign.Main" target="ObserverDesign.Software">
-      <point x="63.375" y="-25.5" />
-      <point x="259.5" y="574.0" />
-      <point x="269.9822916666667" y="574.0" />
-      <point x="269.9822916666667" y="356.0" />
-      <point x="317.83333333333337" y="356.0" />
-      <point x="71.33333333333334" y="103.5" />
-    </edge>
-    <edge source="ObserverDesign.Software" target="ObserverDesign.Observer">
-      <point x="-2.8421709430404007E-14" y="-103.5" />
-      <point x="246.5" y="104.0" />
-      <point x="209.44895833333334" y="104.0" />
-      <point x="32.599999999999994" y="37.0" />
-    </edge>
-    <edge source="ObserverDesign.Observer" target="ObserverDesign.Software">
-      <point x="65.19999999999999" y="37.0" />
-      <point x="242.04895833333333" y="94.0" />
-      <point x="317.8333333333333" y="94.0" />
-      <point x="71.33333333333329" y="-103.5" />
+    <edge source="ObserverDesign.Software" target="ObserverDesign.Student">
+      <point x="0.0" y="-92.0" />
+      <point x="0.0" y="59.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.9279731993299832" x="177.0" y="288.5" />
+  <settings layout="Hierarchic Group" zoom="0.8330827067669173" x="177.0" y="322.5" />
   <SelectedNodes />
   <Categories>
-    <Category>Methods</Category>
     <Category>Fields</Category>
-    <Category>Constructors</Category>
+    <Category>Methods</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
