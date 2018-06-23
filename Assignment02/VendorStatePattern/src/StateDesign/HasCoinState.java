@@ -35,25 +35,18 @@ public class HasCoinState implements VendorMachineState {
 
 		boolean hasDrink, hasEnoughCash, hasEnoughCan;
 		hasDrink = hasEnoughCash = hasEnoughCan = false;
-		DrinkSupply drink = null;
 		for (DrinkSupply drinkSupply : vendingMachine.getDrinkSupplyList()) {
 			if (drinkSupply.name.equalsIgnoreCase( vendingMachine.getSelectedDrinkName() )) {
 				hasDrink = true;
+				vendingMachine.setSelectedDrink( drinkSupply );
 				if (drinkSupply.noOfCans > 0) hasEnoughCan = true;
 				if (drinkSupply.pricePerCan <= vendingMachine.getInsertedCash()) hasEnoughCash = true;
-				drink = drinkSupply;
 				break;
 			}
 		}
 		
 		if (hasDrink && hasEnoughCan && hasEnoughCash) {
-			vendingMachine.setInsertedCash( vendingMachine.getInsertedCash() - drink.pricePerCan );
-			drink.noOfCans--;
-			
-			System.out.println( "Can Delivered: " + drink.name );
-			System.out.println( "Cash Deducted: " + drink.pricePerCan );
-			
-			returnExtraCurrency();
+			vendingMachine.setState( new HasDrinkState( vendingMachine ) );
 			return;
 		}
 		else if (!hasDrink) System.out.println( ":( Sorry Drinks Not Available in Inventory." );
@@ -61,6 +54,8 @@ public class HasCoinState implements VendorMachineState {
 		else if (!hasEnoughCash) System.out.println( ":( Not enough cash inserted." );
 		
 		System.out.println( ":( Select another Drinks" );
+		vendingMachine.setSelectedDrinkName( "" );
+		vendingMachine.setSelectedDrink( null );
 	}
 	
 	@Override

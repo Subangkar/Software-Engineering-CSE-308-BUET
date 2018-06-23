@@ -4,32 +4,38 @@
   <OriginalElement />
   <nodes>
     <node x="0.0" y="0.0">StateDesign.VendingMachine</node>
-    <node x="0.0" y="550.0">StateDesign.HasCoinState</node>
-    <node x="157.0" y="405.0">StateDesign.VendorMachineState</node>
-    <node x="0.0" y="713.0">StateDesign.Main</node>
-    <node x="271.0" y="550.0">StateDesign.InitialState</node>
-    <node x="567.0" y="405.0">StateDesign.DrinkSupply</node>
+    <node x="0.0" y="902.0">StateDesign.HasDrinkState</node>
+    <node x="271.0" y="902.0">StateDesign.HasCoinState</node>
+    <node x="292.5" y="735.0">StateDesign.VendorMachineState</node>
+    <node x="838.0" y="735.0">StateDesign.Main</node>
+    <node x="542.0" y="902.0">StateDesign.InitialState</node>
   </nodes>
   <notes />
   <edges>
+    <edge source="StateDesign.HasDrinkState" target="StateDesign.VendorMachineState">
+      <point x="0.0" y="-70.0" />
+      <point x="125.5" y="877.0" />
+      <point x="327.1666666666667" y="877.0" />
+      <point x="-69.33333333333331" y="58.5" />
+    </edge>
     <edge source="StateDesign.InitialState" target="StateDesign.VendorMachineState">
-      <point x="0.0" y="-59.0" />
-      <point x="396.5" y="525.0" />
-      <point x="313.0" y="525.0" />
-      <point x="52.0" y="47.5" />
+      <point x="0.0" y="-70.0" />
+      <point x="667.5" y="877.0" />
+      <point x="465.8333333333333" y="877.0" />
+      <point x="69.33333333333331" y="58.5" />
     </edge>
     <edge source="StateDesign.HasCoinState" target="StateDesign.VendorMachineState">
-      <point x="0.0" y="-59.0" />
-      <point x="125.5" y="525.0" />
-      <point x="209.0" y="525.0" />
-      <point x="-52.0" y="47.5" />
+      <point x="0.0" y="-70.0" />
+      <point x="0.0" y="58.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.1950955943474646" x="216.99999999999997" y="942.5236836614037" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="0.5893617021276596" x="602.4007220216606" y="450.0" />
+  <SelectedNodes>
+    <node>StateDesign.VendingMachine</node>
+  </SelectedNodes>
   <Categories>
-    <Category>Inner Classes</Category>
     <Category>Methods</Category>
+    <Category>Inner Classes</Category>
     <Category>Fields</Category>
   </Categories>
   <SCOPE>All</SCOPE>

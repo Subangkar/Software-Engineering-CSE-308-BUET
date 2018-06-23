@@ -16,8 +16,7 @@ public class VendingMachine {
 	
 	private double insertedCash;
 	private String selectedDrinkName;
-	
-	private boolean hasDrink, hasEnoughCash, hasEnoughCan;
+
 	private DrinkSupply selectedDrink;
 	
 	VendingMachine( DrinkSupply[] drinkSupplyList ) {
@@ -63,28 +62,8 @@ public class VendingMachine {
 		vendorMachineState.returnExtraCurrency();
 	}
 	
-	public boolean isHasDrink() {
-		return hasDrink;
-	}
-	
-	public void setHasDrink( boolean hasDrink ) {
-		this.hasDrink = hasDrink;
-	}
-	
-	public boolean isHasEnoughCash() {
-		return hasEnoughCash;
-	}
-	
-	public void setHasEnoughCash( boolean hasEnoughCash ) {
-		this.hasEnoughCash = hasEnoughCash;
-	}
-	
-	public boolean isHasEnoughCan() {
-		return hasEnoughCan;
-	}
-	
-	public void setHasEnoughCan( boolean hasEnoughCan ) {
-		this.hasEnoughCan = hasEnoughCan;
+	void getDrinkDelivery(){
+		vendorMachineState.getDrink();
 	}
 	
 	public DrinkSupply getSelectedDrink() {

@@ -4,32 +4,40 @@
   <OriginalElement />
   <nodes>
     <node x="0.0" y="0.0">StateDesign.VendingMachine</node>
-    <node x="0.0" y="528.0">StateDesign.HasCoinState</node>
-    <node x="157.0" y="383.0">StateDesign.VendorMachineState</node>
-    <node x="567.0" y="383.0">StateDesign.Main</node>
-    <node x="271.0" y="528.0">StateDesign.InitialState</node>
+    <node x="0.0" y="704.0">StateDesign.HasDrinkState</node>
+    <node x="271.0" y="704.0">StateDesign.HasCoinState</node>
+    <node x="292.5" y="537.0">StateDesign.VendorMachineState</node>
+    <node x="0.0" y="889.0">StateDesign.Main</node>
+    <node x="542.0" y="704.0">StateDesign.InitialState</node>
+    <node x="838.0" y="537.0">StateDesign.DrinkSupply</node>
   </nodes>
   <notes />
   <edges>
     <edge source="StateDesign.InitialState" target="StateDesign.VendorMachineState">
-      <point x="0.0" y="-59.0" />
-      <point x="396.5" y="503.0" />
-      <point x="313.0" y="503.0" />
-      <point x="52.0" y="47.5" />
+      <point x="2.8421709430404007E-14" y="-70.0" />
+      <point x="667.5" y="679.0" />
+      <point x="465.8333333333333" y="679.0" />
+      <point x="69.33333333333331" y="58.5" />
     </edge>
     <edge source="StateDesign.HasCoinState" target="StateDesign.VendorMachineState">
-      <point x="0.0" y="-59.0" />
-      <point x="125.5" y="503.0" />
-      <point x="209.0" y="503.0" />
-      <point x="-52.0" y="47.5" />
+      <point x="0.0" y="-70.0" />
+      <point x="-1.4210854715202004E-14" y="58.5" />
+    </edge>
+    <edge source="StateDesign.HasDrinkState" target="StateDesign.VendorMachineState">
+      <point x="0.0" y="-70.0" />
+      <point x="125.5" y="679.0" />
+      <point x="327.1666666666667" y="679.0" />
+      <point x="-69.33333333333333" y="58.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.5893617021276596" x="184.5" y="460.0" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="0.5893617021276596" x="602.4007220216606" y="475.17328519855596" />
+  <SelectedNodes>
+    <node>StateDesign.VendingMachine</node>
+  </SelectedNodes>
   <Categories>
-    <Category>Fields</Category>
     <Category>Methods</Category>
     <Category>Inner Classes</Category>
+    <Category>Fields</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>

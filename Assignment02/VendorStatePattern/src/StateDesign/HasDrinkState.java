@@ -20,8 +20,8 @@ public class HasDrinkState implements VendorMachineState {
 	
 	@Override
 	public void selectDrinks() {
-		System.out.println( ":( Drinks Already Selected. Change (Y/N) ?." );
-		char opt = (char) new Scanner( System.in ).nextByte();
+		System.out.print( ":( Drinks Already Selected. Change Selection (Y/N)? : " );
+		char opt = new Scanner( System.in ).next().charAt( 0 );
 		if (opt == 'Y') {
 			vendingMachine.setState( new HasCoinState( vendingMachine ) );
 		}
@@ -29,10 +29,11 @@ public class HasDrinkState implements VendorMachineState {
 	
 	@Override
 	public void returnExtraCurrency() {
-		System.out.println( ":( Drinks Already Selected. First Cancel Selection (Y/N) ?." );
+		System.out.print( ":( Drinks Already Selected. Cancel Delivery & get cash returned (Y/N)? : " );
 		char opt = (char) new Scanner( System.in ).nextByte();
 		if (opt == 'Y') {
 			vendingMachine.setState( new HasCoinState( vendingMachine ) );
+			vendingMachine.getReturnCash();
 		}
 	}
 	
@@ -47,5 +48,9 @@ public class HasDrinkState implements VendorMachineState {
 		System.out.println( "Can Delivered: " + drink.name );
 		System.out.println( "Cash Deducted: " + drink.pricePerCan );
 		
+		vendingMachine.setSelectedDrinkName( "" );
+		vendingMachine.setSelectedDrink( null );
+		if(vendingMachine.getInsertedCash()>0)vendingMachine.setState( new HasCoinState( vendingMachine ) );
+		else vendingMachine.setState( new InitialState( vendingMachine ) );
 	}
 }
