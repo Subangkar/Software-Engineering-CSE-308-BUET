@@ -12,8 +12,20 @@ public class VendingMachine {
 	
 	private ArrayList< DrinkSupply > drinkSupplyList;
 	
+	private double cash;
+	
 	private double insertedCash;
-	private String selectedDrinks;
+	private String selectedDrinkName;
+	
+	private boolean hasDrink, hasEnoughCash, hasEnoughCan;
+	private DrinkSupply selectedDrink;
+	
+	VendingMachine( DrinkSupply[] drinkSupplyList ) {
+		vendorMachineState = new InitialState( this );
+		this.drinkSupplyList = new ArrayList( Arrays.asList( drinkSupplyList ) );
+		insertedCash = 0;
+		cash = 1000;
+	}
 	
 	double getInsertedCash() {
 		return insertedCash;
@@ -23,22 +35,16 @@ public class VendingMachine {
 		this.insertedCash = insertedCash;
 	}
 	
-	String getSelectedDrinks() {
-		return selectedDrinks;
+	String getSelectedDrinkName() {
+		return selectedDrinkName;
 	}
 	
-	void setSelectedDrinks( String selectedDrinks ) {
-		this.selectedDrinks = selectedDrinks;
+	void setSelectedDrinkName( String selectedDrinkName ) {
+		this.selectedDrinkName = selectedDrinkName;
 	}
 	
 	ArrayList< DrinkSupply > getDrinkSupplyList() {
 		return drinkSupplyList;
-	}
-	
-	VendingMachine( DrinkSupply[] drinkSupplyList ) {
-		vendorMachineState = new InitialState( this );
-		this.drinkSupplyList = new ArrayList( Arrays.asList( drinkSupplyList ) );
-		insertedCash = 0;
 	}
 	
 	void setState( VendorMachineState state ) {
@@ -53,14 +59,55 @@ public class VendingMachine {
 		vendorMachineState.selectDrinks();
 	}
 	
-	void getCash() {
+	void getReturnCash() {
 		vendorMachineState.returnExtraCurrency();
+	}
+	
+	public boolean isHasDrink() {
+		return hasDrink;
+	}
+	
+	public void setHasDrink( boolean hasDrink ) {
+		this.hasDrink = hasDrink;
+	}
+	
+	public boolean isHasEnoughCash() {
+		return hasEnoughCash;
+	}
+	
+	public void setHasEnoughCash( boolean hasEnoughCash ) {
+		this.hasEnoughCash = hasEnoughCash;
+	}
+	
+	public boolean isHasEnoughCan() {
+		return hasEnoughCan;
+	}
+	
+	public void setHasEnoughCan( boolean hasEnoughCan ) {
+		this.hasEnoughCan = hasEnoughCan;
+	}
+	
+	public DrinkSupply getSelectedDrink() {
+		return selectedDrink;
+	}
+	
+	public void setSelectedDrink( DrinkSupply selectedDrink ) {
+		this.selectedDrink = selectedDrink;
+	}
+	
+	public double getCash() {
+		return cash;
+	}
+	
+	public void setCash( double cash ) {
+		this.cash = cash;
 	}
 	
 	public void showAvailableItems() {
 		for (DrinkSupply drink : drinkSupplyList) {
 			System.out.println( ">> " + drink.name + " " + drink.pricePerCan + "$" );
 		}
+		System.out.println( "Total Profit: " + cash );
 	}
 	
 }

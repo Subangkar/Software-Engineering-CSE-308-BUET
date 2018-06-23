@@ -31,14 +31,14 @@ public class Main {
 					vendingMachine.selectItem();
 					break;
 				case 3:
-					vendingMachine.getCash();
+					vendingMachine.getReturnCash();
 					break;
 				case 4:
 					vendingMachine.showAvailableItems();
 					break;
 
 				case 0:
-					vendingMachine.getCash();
+					vendingMachine.getReturnCash();
 					break;
 			}
 		}

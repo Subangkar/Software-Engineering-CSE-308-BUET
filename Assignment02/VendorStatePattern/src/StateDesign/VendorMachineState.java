@@ -8,4 +8,6 @@ public interface VendorMachineState {
 	void insertCoin();
 	void selectDrinks();
 	void returnExtraCurrency();
+	
+	void getDrink();
 }

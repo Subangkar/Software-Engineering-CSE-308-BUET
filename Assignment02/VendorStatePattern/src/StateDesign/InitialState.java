@@ -35,4 +35,9 @@ public class InitialState implements VendorMachineState {
 	public void returnExtraCurrency() {
 		System.out.println( ":( No cash remaining." );
 	}
+	
+	@Override
+	public void getDrink() {
+		System.out.println( ":( insert coin first." );
+	}
 }

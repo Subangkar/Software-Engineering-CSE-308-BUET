@@ -31,13 +31,13 @@ public class HasCoinState implements VendorMachineState {
 		vendingMachine.showAvailableItems();
 		System.out.println( "Enter your Preferred Drinks Name: " );
 		String drinks = new Scanner( System.in ).next();
-		vendingMachine.setSelectedDrinks( drinks );
+		vendingMachine.setSelectedDrinkName( drinks );
 
 		boolean hasDrink, hasEnoughCash, hasEnoughCan;
 		hasDrink = hasEnoughCash = hasEnoughCan = false;
 		DrinkSupply drink = null;
 		for (DrinkSupply drinkSupply : vendingMachine.getDrinkSupplyList()) {
-			if (drinkSupply.name.equalsIgnoreCase( vendingMachine.getSelectedDrinks() )) {
+			if (drinkSupply.name.equalsIgnoreCase( vendingMachine.getSelectedDrinkName() )) {
 				hasDrink = true;
 				if (drinkSupply.noOfCans > 0) hasEnoughCan = true;
 				if (drinkSupply.pricePerCan <= vendingMachine.getInsertedCash()) hasEnoughCash = true;
@@ -73,6 +73,11 @@ public class HasCoinState implements VendorMachineState {
 			System.out.println( "No cash to return" );
 		}
 		vendingMachine.setState( new InitialState( vendingMachine ) );
+	}
+	
+	@Override
+	public void getDrink() {
+		System.out.println(":( Drink Not Selected");
 	}
 	
 }
