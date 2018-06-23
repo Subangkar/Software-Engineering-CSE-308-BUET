@@ -10,6 +10,7 @@ public class HasDrinkState implements VendorMachineState {
 	private VendingMachine vendingMachine;
 	
 	public HasDrinkState( VendingMachine vendingMachine ) {
+		System.out.println( "Machine in HasDrinkState" );
 		this.vendingMachine = vendingMachine;
 	}
 	
@@ -30,7 +31,7 @@ public class HasDrinkState implements VendorMachineState {
 	@Override
 	public void returnExtraCurrency() {
 		System.out.print( ":( Drinks Already Selected. Cancel Delivery & get cash returned (Y/N)? : " );
-		char opt = (char) new Scanner( System.in ).nextByte();
+		char opt = new Scanner( System.in ).next().charAt( 0 );
 		if (opt == 'Y') {
 			vendingMachine.setState( new HasCoinState( vendingMachine ) );
 			vendingMachine.getReturnCash();
