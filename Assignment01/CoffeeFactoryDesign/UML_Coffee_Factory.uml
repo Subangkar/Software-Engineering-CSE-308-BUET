@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="127.26111111111109" y="253.0">FactoryDesign.CoffeeFactory</node>
+    <node x="182.0" y="109.0">FactoryDesign.CoffeeA</node>
+    <node x="351.71805555555557" y="0.0">FactoryDesign.Coffee</node>
+    <node x="334.26111111111106" y="380.0">FactoryDesign.Customer</node>
+    <node x="364.0" y="109.0">FactoryDesign.CoffeeC</node>
+    <node x="0.0" y="109.0">FactoryDesign.CoffeeB</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="FactoryDesign.CoffeeFactory" target="FactoryDesign.Coffee">
+      <point x="99.375" y="-56.0" />
+      <point x="457.13611111111106" y="198.0" />
+      <point x="540.1875" y="198.0" />
+      <point x="540.1875" y="89.0" />
+      <point x="465.1180555555556" y="89.0" />
+      <point x="32.400000000000034" y="29.5" />
+    </edge>
+    <edge source="FactoryDesign.Customer" target="FactoryDesign.Coffee">
+      <point x="47.5" y="-29.5" />
+      <point x="476.76111111111106" y="355.0" />
+      <point x="561.1152777777777" y="355.0" />
+      <point x="561.1152777777777" y="79.0" />
+      <point x="497.5180555555556" y="79.0" />
+      <point x="64.80000000000001" y="29.5" />
+    </edge>
+    <edge source="FactoryDesign.CoffeeFactory" target="FactoryDesign.CoffeeA">
+      <point x="-33.125" y="-56.0" />
+      <point x="324.63611111111106" y="188.0" />
+      <point x="263.0" y="188.0" />
+      <point x="0.0" y="29.5" />
+    </edge>
+    <edge source="FactoryDesign.Customer" target="FactoryDesign.CoffeeFactory">
+      <point x="-47.5" y="-29.5" />
+      <point x="381.76111111111106" y="355.0" />
+      <point x="357.76111111111106" y="355.0" />
+      <point x="0.0" y="56.0" />
+    </edge>
+    <edge source="FactoryDesign.CoffeeB" target="FactoryDesign.Coffee">
+      <point x="0.0" y="-29.5" />
+      <point x="81.0" y="79.0" />
+      <point x="367.91805555555555" y="79.0" />
+      <point x="-64.80000000000001" y="29.5" />
+    </edge>
+    <edge source="FactoryDesign.CoffeeA" target="FactoryDesign.Coffee">
+      <point x="0.0" y="-29.5" />
+      <point x="263.0" y="89.0" />
+      <point x="400.3180555555556" y="89.0" />
+      <point x="-32.39999999999998" y="29.5" />
+    </edge>
+    <edge source="FactoryDesign.CoffeeFactory" target="FactoryDesign.CoffeeB">
+      <point x="-99.375" y="-56.0" />
+      <point x="258.38611111111106" y="198.0" />
+      <point x="81.0" y="198.0" />
+      <point x="0.0" y="29.5" />
+    </edge>
+    <edge source="FactoryDesign.CoffeeC" target="FactoryDesign.Coffee">
+      <point x="0.0" y="-29.5" />
+      <point x="445.0" y="89.0" />
+      <point x="432.71805555555557" y="89.0" />
+      <point x="0.0" y="29.5" />
+    </edge>
+    <edge source="FactoryDesign.CoffeeFactory" target="FactoryDesign.CoffeeC">
+      <point x="33.125" y="-56.0" />
+      <point x="390.88611111111106" y="198.0" />
+      <point x="445.0" y="198.0" />
+      <point x="0.0" y="29.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="281.0" y="206.0" />
+  <SelectedNodes>
+    <node>FactoryDesign.CoffeeFactory</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
